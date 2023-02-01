@@ -67,16 +67,16 @@
 
 <script>
   function pixelToVH(value) {
-    return document.querySelector("#pixelToVH").innerHTML = `Result = ${(100 * value) / 686}vh`;
+    return document.querySelector("#pixelToVH").innerHTML = `Result = ${Math.round((100 * value) / 686)}vh`;
   }
   function pixelToVW(value) {
-    return document.querySelector("#pixelToVW").innerHTML = `Result = ${(100 * value) / 1366}vw`;
+    return document.querySelector("#pixelToVW").innerHTML = `Result = ${Math.round((100 * value) / 1366)}vw`;
   }
   function vhToPixel(value) {
-    return document.querySelector("#vhToPixel").innerHTML = `Result = ${(686 * value) / 100}px`;
+    return document.querySelector("#vhToPixel").innerHTML = `Result = ${Math.round((686 * value) / 100)}px`;
   }
   function vwToPixel(value) {
-    return document.querySelector("#vwToPixel").innerHTML = `Result = ${((1366 * value) / 100)}px`;
+    return document.querySelector("#vwToPixel").innerHTML = `Result = ${Math.round((1366 * value) / 100)}px`;
   }
 
   window.addEventListener('resize', updateMeasurements)
